@@ -26,7 +26,7 @@ module KnightRouteFinder
     found = false
     route_table = Array.new(8) { Array.new(8) }
     knight_moves = [[-1,-2],[2,1],[-2,1],[2,-1],[-2,-1],[1,2],[-1,2],[1,-2]]
-  
+
     queue = [start]
     queue.each do |column,rank|
       knight_moves.each do |column_move, rank_move|
@@ -72,6 +72,7 @@ module KnightRouteFinder
 
     route = KnightRouteFinder::find_shortest_route_between_coordinates(start,finish)
     return false if !route
+
     route_map = []
     route.each do |square_coordinates|
       route_map.push coordinates_to_algebraic(square_coordinates)

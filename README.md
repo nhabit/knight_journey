@@ -8,27 +8,25 @@ Given a standard 8x8 chessboard, accept two squares identified by algebraic ches
 Written and tested with Ruby 2.2.3 - It should probably work with any later version of ruby, but not tested.
 
 
-To *Install*:
+To **Install**:
 ```
 git clone git@github.com:nhabit/knight_journey.git
 cd knight_journey
 bundle install --path .bundle
 ```
-To *Test*:
-Rspec tests are included. To run the tests type: 
+To **Test**:
+Rspec tests are included. To run the tests type:
 ```
 cd knight_journey
 bundle exec rspec
 ```
 
-To *Run*:
+To **Run**:
 ```
 cd knight_journey
 ruby knights_travails.rb A8 B7
 ```
-**Notes/Comments/thoughts:**
+***Notes/Comments/Thoughts:***
 Yes, it was a fun challenge, it took longer than 2 hours, but mostly because once I started I found it hard to stop. The problem itself was not too hard. I started with a spike script that worked and then turned it into a module ```lib/knight_route_finder.rb``` and a runner file ```knights_travails.rb``` .
 
-I was intentionally attempting to avoid creating objects and using the object paradigm. The module functions in the knight_route_finder are all standalone and don't need access to any state variables. 
-
-
+I was intentionally attempting to avoid creating objects and using the object paradigm. The module functions in the knight_route_finder are all standalone and don't need access to any state variables.
