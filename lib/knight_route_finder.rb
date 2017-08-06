@@ -13,7 +13,9 @@ module KnightRouteFinder
   end
 
   def self.are_they_legal?(list_to_check)
+    puts list_to_check.inspect
     list_to_check.each do  |coordinates|
+      puts coordinates.inspect
       return false if !is_it_legal?(coordinates[0]) || !is_it_legal?(coordinates[1])
     end
     return true
@@ -63,6 +65,21 @@ module KnightRouteFinder
     end
     move_path.pop
     return move_path.reverse!
+  end
+
+  def self.find_shortest_route_between_algebraic_locations(args)
+
+    start = algebraic_to_coordinates(args[0])
+    finish = algebraic_to_coordinates(args[1])
+    return false if !are_they_legal?([start,finish])
+
+    route = KnightRouteFinder::find_shortest_route_between_coordinates(start,finish)
+    return false if !route
+    route_map = []
+    route.each do |square_coordinates|
+      route_map.push coordinates_to_algebraic(square_coordinates)
+    end
+    route_map
   end
 
 end
