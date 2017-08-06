@@ -13,9 +13,7 @@ module KnightRouteFinder
   end
 
   def self.are_they_legal?(list_to_check)
-    puts list_to_check.inspect
     list_to_check.each do  |coordinates|
-      puts coordinates.inspect
       return false if !is_it_legal?(coordinates[0]) || !is_it_legal?(coordinates[1])
     end
     return true

@@ -11,22 +11,10 @@ end
 if ARGV.length < 2
   error_message
 else
-  start, finish = *ARGV
-  start = KnightRouteFinder::algebraic_to_coordinates(start)
-  finish = KnightRouteFinder::algebraic_to_coordinates(finish)
-  route_map = []
-
-  if KnightRouteFinder::are_they_legal?([start,finish])
-    route = KnightRouteFinder::find_shortest_route_between_coordinates(start,finish)
-    if (!route)
-      error_message()
-    else
-      route.each do |square_coordinates|
-        route_map.push KnightRouteFinder::coordinates_to_algebraic(square_coordinates)
-      end
-      puts route_map.join(" ")
-    end
-  else
+  route = KnightRouteFinder::find_shortest_route_between_algebraic_locations(ARGV)
+  if (!route)
     error_message()
+  else
+    puts route.join(" ")
   end
 end
