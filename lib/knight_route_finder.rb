@@ -53,7 +53,6 @@ module KnightRouteFinder
   def self.find_shortest_route_between_coordinates(start,finish)
 
     route_table = build_route_table({:start => start, :finish => finish})
-
     move_path = [finish]
     if (route_table)
       move_path.each do | coords |
