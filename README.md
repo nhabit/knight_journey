@@ -35,3 +35,9 @@ The problem itself was not too hard. I started with a spike script that worked a
 I was intentionally attempting to avoid creating objects and using the object paradigm. The module functions in the knight_route_finder are all standalone and don't need access to any state variables. Initially I was considering using Elixir and may well still do that too (for the fun and learning). 
 
 
+``self.build_route_table(journey_hash)```
+The journey_hash could actually just be a two element array/list/tuple of some sort, but making it a hash makes it easier to refactor and perhaps add something like 'waypoint' or 'blockers' to further the complexity of a journey.
+
+It's probably more verbose than it needs to be and I'm aware that I'm not using the latest idioms (especially for hashes). But I let myself off the hook because it's the first Ruby I've written for a few years.
+
+
