@@ -38,7 +38,7 @@ The journey_hash could actually just be a two element array/list/tuple of some s
 6. It's pretty verbose and you could probably do this exercise in half the lines of code (less breaking out of functions) but I think it would be less understandable (and need more comments as a result)  - It could also be more verbose ```next if route_table[new_column][new_rank]``` could be moved into its own function e.g. ```already_found(new_column, new_rank)```
 7. Columns and Ranks - because it was originally file and rank and then I thought that file as a word in a program could prove confusing. Chose not to change rank to row - just because!
 8. I'm aware that I'm not using the latest idioms (especially for hashes). But I let myself off the hook because it's the first Ruby I've written for a few years.
-9. It's worth noting that changing the order of ```knight_moves = [[-1,-2],[2,1],[-2,1],[2,-1],[-2,-1],[1,2],[-1,2],[1,-2]]``` changes the order of the search which in turn can result in a different 'shortest journey' being returned. This is also because there can be more than one short journey (of the same length).
+9. It's worth noting that changing the order of ```knight_moves = [[-1,-2],[2,1],[-2,1],[2,-1],[-2,-1],[1,2],[-1,2],[1,-2]]``` changes the order of the search which in turn can result in a different 'shortest journey' being returned. This is also because there can be more than one shortest journey (of the same length).
 
 
 
