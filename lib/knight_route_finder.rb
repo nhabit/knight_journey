@@ -8,5 +8,10 @@ module KnightRouteFinder
     "#{(coordinates[0] + 65).chr}#{ coordinates[1] + 1}"
   end
 
+  def self.is_it_legal?(position_to_check)
+    (position_to_check >=0 and position_to_check <=7 )
+  end
+
+
 
 end
