@@ -26,8 +26,7 @@ module KnightRouteFinder
     found = false
     route_table = Array.new(8) { Array.new(8) }
     knight_moves = [[-1,-2],[2,1],[-2,1],[2,-1],[-2,-1],[1,2],[-1,2],[1,-2]]
-    route_table[start[0]][start[1]] = :start
-
+  
     queue = [start]
     queue.each do |column,rank|
       knight_moves.each do |column_move, rank_move|
