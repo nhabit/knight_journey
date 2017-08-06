@@ -55,4 +55,11 @@ describe KnightRouteFinder do
     end
   end
 
+  describe "::find_shortest_route_between_coordinates" do
+    context "given two coordinate locations" do
+      it "returns an array of locations that indicate the shortest route" do
+        expect(KnightRouteFinder::find_shortest_route_between([0,7], [1,6])).to eql([[2, 6], [1, 4], [3, 5], [1, 6]])
+      end
+    end
+  end
 end
