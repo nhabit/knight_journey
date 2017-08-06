@@ -29,7 +29,7 @@ ruby knights_travails.rb A8 B7
 
 ***Notes/Comments/Thoughts:***
 
-1. Yes, it was a fun challenge, it took longer than 2 hours, but mostly because once I started I found it hard to stop. 
+1. Yes, it was a fun challenge, it took longer than 2 hours, but mostly because once I started I found it hard to stop because, Aside from some messy google related javascript, I've done very little coding in the last year, and I love coding. So, although I had a ton of other stuff to do, it proved valuable procrastination...
 2. The problem itself was not too hard. I started with a spike script that worked and then turned it into a module ```lib/knight_route_finder.rb``` and a runner file ```knights_travails.rb``` .
 3. I was intentionally attempting to avoid creating objects and using the object paradigm. The module functions in the knight_route_finder are all standalone and don't need access to any state variables. Initially I was considering using Elixir and may well still do that too (for the fun and learning). Ruby's mutable variables made it easy for me to modify the queue while I was iterating through it. There's lots more need for recursion as the correct approach with a pure functional language like Erlang/Elixir
 4. The input error handling is a bit sledgehammery - but it does the job.
