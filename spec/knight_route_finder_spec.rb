@@ -25,6 +25,7 @@ describe KnightRouteFinder do
     context "given a legal number" do
       it "returns true if the number is between 0 and 7 (the size of zero-indexed chessboard)" do
         expect(KnightRouteFinder::is_it_legal?(4)).to eql(true)
+        expect(KnightRouteFinder::is_it_legal?(4)).to eql(true)
       end
     end
   end
@@ -37,4 +38,21 @@ describe KnightRouteFinder do
       end
     end
   end
+
+  describe "::are_they_legal?" do
+    context "given an a list of coordinates" do
+      it "returns false if any one of the coordinates is illegal" do
+        expect(KnightRouteFinder::are_they_legal?([[8,4],[1,2]])).to eql(false)
+      end
+    end
+  end
+
+  describe "::are_they_legal?" do
+    context "given an a list of coordinates" do
+      it "returns true if all of the coordinates are legal" do
+        expect(KnightRouteFinder::are_they_legal?([[7,4],[1,2]])).to eql(true)
+      end
+    end
+  end
+
 end
