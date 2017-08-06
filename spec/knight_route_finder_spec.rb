@@ -11,4 +11,15 @@ describe KnightRouteFinder do
       end
     end
   end
+
+  describe "::coordinates_to_algebraic" do
+    context "given valid coordinate list" do
+      it "returns the correct algebraic notation" do
+        expect(KnightRouteFinder::coordinates_to_algebraic([0,3])).to eql("A4")
+        expect(KnightRouteFinder::coordinates_to_algebraic([3,7])).to eql("D8")
+      end
+    end
+  end
+
+
 end
